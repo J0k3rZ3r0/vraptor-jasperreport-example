@@ -32,7 +32,7 @@ public class ClientsController {
 		result.include("clients", clients.listAll());
 	}
 
-	@Post @Path("/clients") 
+	@Post("/clients") 
 	public void add(Client client) {
 		clients.add(client);
 		result.redirectTo(this).index();

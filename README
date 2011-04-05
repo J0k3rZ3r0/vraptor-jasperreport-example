@@ -1,4 +1,4 @@
-VRAPTOR BLANK PROJECT
+VRAPTOR JASPER REPORT EXAMPLE 
 --------------------------------------------------------------------------------
 
 IMPORTING THIS PROJECT ON ECLIPSE
@@ -12,9 +12,5 @@ In order to import this project on Eclipse, you'll need:
 	* just right click on the project, run as, run on server. choose a servlet container or configure a new one
 	* done! check the log files. access http://localhost:8080/vraptor-jasperreport-example/ (or change 8080 to the appropriate port).
 	
-IMPORTING THIS PROJECT ON NETBEANS 6.8
 	
-	* choose menu File >> Open Project
-	* choose the directory that contains vraptor-jasperreport-example
-	* right click on project and choose Run
 
