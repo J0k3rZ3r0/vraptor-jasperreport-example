@@ -3,16 +3,20 @@ package br.com.caelum.vraptor.controller;
 
 import static br.com.caelum.vraptor.jasperreports.formats.Formats.*;
 
+
 import java.util.List;
 
+import net.sf.jasperreports.engine.export.JRTextExporterParameter;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.dao.Clients;
 import br.com.caelum.vraptor.interceptor.download.Download;
+import br.com.caelum.vraptor.jasperreports.ExportFormat;
 import br.com.caelum.vraptor.jasperreports.JasperReportDownload;
 import br.com.caelum.vraptor.jasperreports.Report;
+import br.com.caelum.vraptor.jasperreports.formats.TXT;
 import br.com.caelum.vraptor.model.Client;
 import br.com.caelum.vraptor.report.ClientsReport;
 
@@ -53,7 +57,10 @@ public class ClientsController {
 	@Path("/clients/txt") 
 	public Download txtReport() {
 		Report<Client> report = generateReport();
-		return new JasperReportDownload(report, TXT());
+		ExportFormat txt = new TXT();
+		txt.configure(JRTextExporterParameter.OFFSET_X, 0); //customizacoes
+		txt.configure(JRTextExporterParameter.OFFSET_Y, 0);
+		return new JasperReportDownload(report, txt, false); //sem download, visualizacao no browser
 	}
 	
 	@Path("/clients/odt") 
