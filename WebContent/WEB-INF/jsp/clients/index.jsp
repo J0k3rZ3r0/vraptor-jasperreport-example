@@ -8,7 +8,7 @@
 <body>
    
    <form action="<c:url value="/clients"/>" method="post">
-	    Nome: <input type="text" name="client.name" /><br/>
+	    Name: <input type="text" name="client.name" /><br/>
 	    Email: <input type="text" name="client.email" /><br/>
 	    <input type="submit" value="Save" /><br>
 	</form>
@@ -16,7 +16,7 @@
 	<table>  
      
 	   <tr>  
-	      <td>Nome</td>   
+	      <td>Name</td>   
 	      <td>Email</td>   
 	   </tr>  
 	   
@@ -29,16 +29,18 @@
 	   
 	<br>
 	
-	Listagem de Clientes <br>
+	Clients <br>
 	
    </table> 
 	
 	<a href="<c:url value="/clients/csv"/>">CSV</a>
+	<a href="<c:url value="/clients/xls"/>">XLS</a>
 	<a href="<c:url value="/clients/docx"/>">DOCX</a>
 	<a href="<c:url value="/clients/rtf"/>">RTF</a>
 	<a href="<c:url value="/clients/txt"/>">TXT</a>
 	<a href="<c:url value="/clients/odt"/>">ODT</a>
 	<a href="<c:url value="/clients/pdf"/>">PDF</a>
-   
+    <a href="<c:url value="/clients/zip"/>">ZIP</a>
+    
 </body>
 </html>

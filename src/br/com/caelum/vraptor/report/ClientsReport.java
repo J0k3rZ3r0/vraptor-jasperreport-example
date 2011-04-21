@@ -18,8 +18,9 @@ public class ClientsReport implements Report<Client> {
 		this.parameters = new HashMap<String, Object>();
 	}
 
-	public void addParameter(String key, Object value) {
+	public Report<Client> addParameter(String key, Object value) {
 		this.parameters.put(key, value);
+		return this;
 	}
 
 	public Collection<Client> getData() {
